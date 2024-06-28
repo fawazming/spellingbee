@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Primary Category</title>
+	<!-- <script src="https://cdn.tailwindcss.com"></script> -->
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<main id="screen">
+		<img src="leclogo.png" alt="">
+		<h4 class="text-center text-2xl mt-10 text-gray-400">Primary Category</span></h4>
+		<h4 class="text-center font-bold text-3xl mt-10 text-red-500">Q: <span id="kNo">😉</span></h4>
+		<h1 class="text-center font-mono font-extralight text-9xl mt-10" id="keyw">😄😄😄😄</h1>
+	</main>
+	<aside style="position:absolute; bottom:20px; right:2px">
+		<p class="text-center text-xl">Total Words: <span id="tWords"></span></p>
+		<form action="" id="question">
+			<input placeholder="Question Number" class="p-4 text-2xl" type="search" id="qNo" autofocus>
+		</form>
+	</aside>
+	<footer class="text-center text-2xl absolute left-10 bottom-1"><p>Crafted with 💖 by <a href="https://rayyantech.sgm.ng" class="text-blue-800 font-bold animate-pulse">Rayyan Technologies</a></p></footer>
+	<script>
+		let words = "Experience, opportunity, successful, department, attention, opinion, additional, professional, terminal, schedule, European, intelligence, ignorance, aggressive, independent, unacceptable, restaurant, judgement, vacuum, immediate, specify, package, personality, pleased, prepared, highlight, external, session, confirms, difficulty, previous, physical, satisfaction, zoology, illness, aerosol, glamour, restore, zenith, accidentally, zebra, amoeba, column, believe, category, acceptable, accommodate, argument, acquire, pronunciation, signature, purpose, waiting, interview, pavilion, furniture, learner, vanilla, conditions, assessment, unattractive, collected, retrievable, weekend, unaccountable, accomplice, velocity, careers, jury, discussed, sensory, variable, delegate, accordion, disability, harass, leisure, cognitive, hierarchy, kernel, yolk, isolate, widen, Caribbean, cuticle, amateur, restrict, ambitious, speculative, apparent, flannel, conscious, italic, atheist, wretch, collectible, committed, changeable, vulture, fleece, truth, business, learn, wrist, balloon, banana, correct, password, reset, subject, document, attach, width, address, certain, merit, private, vehicle, internal, yelp, kitchen, hobby, cleaner, education, roles, normally, perfume, foreign, customer, manager, application, storage, account, height, current, reason, ability, following, activity, benefit, agency, calendar, progress, protect, running, services, timings, welcoming, between, yacht, review, buffet, programme, umpire, awarded, designed, notification, performance, qualification, petticoat, guarantee, prevent, foundation, illegal, baseless, subscription, dumbbell, possible, induction, advertise, naturally, eager, unaffected, usually, emerge, process, ultimate, island, restless, naturally, personal, warehouse, importance, procedure, concern, knowledge, explain, equipment, effective, processing, variations, safely, dispatched, optimum, different, translate, frequently, reverse, preparation, chosen, baboon, chilled, evidence, legislation, portfolio, agreement, checklist, achievement, duties, allocated, consists, discipline, ulcer, explanatory, features, alteration, depending, pressure, completion, zodiac, exceed, definitely, embarrass, billiards, grateful, certificate, exhilarate, cosmetics, existence, accompany, arrive, instructions, affidavit, struggling, focus, cutlery, recruitment, vacancies, zeal, scenario, essential, relevant, institutions, technique, scenic, willingness, scissors, versatile, checklist, accredited, belated, fissure, likely, community, trained, beneath, controller, blissful, consider, daiquiri, pawn, revue, vagrant, abdicate, conundrum, peculiar, drunkenness, fiery, xenophobia, wince, wisp, yearn, braggart, burrito, abattoir, zymurgy, boisterous, bursary, storing, buccaneer, buffoon, breakage, yonder, wedlock, wrath, refurbishment, continuation, blarney, wily, kleptomaniac, questionnaire, retrospect, uncouth, charlatan, winsome, zany, competence, flippant, literature, prepare, justify, persistent, hopefully, attractive, complimentary, worth, refrigerator, adjustment, expiration, reflect, translation, impressive, hydrogen, bacteria, pursuit, locally, publicity, threshold, consideration, fantastic, palace, replace, conviction, bulbous, flaccid, charred, scraggy, homestead, awry, weave, flimsy, curdle, viscid, humorous, yak, ethnicity, anxiety, rhinoceros, wiry, dyslexia, alibi, impairment, inoculate, rhetoric, braise, wield, islet, aviation, aileron, isthmus, wreckage, gizzard, windward, revere, wreak, convalesce, wrestle, revert, scowl, hobble, yaw, gladden, wallow, yap, wilderness, baroness, scribble, zealot, whimper, retract, wring, babble, flagellate, udder, accede, zither, buoyancy, brook, buttress, yawn, florist, zephyr, jackal, retort, conscious, vermilion, acquit, cemetery, computation, conscientious, bellwether, rhapsody, weir, sensitivity, wharf, baluster, acanthus, ballot, windlass, waif, ballad, patronage, regard, aggrandize, dungeon, battalion, wry, yule, bureaucracy, barricade, zest, schism, veracity, zeppelin, vendetta, unaccustomed, isosceles, hoist, spectral, glare, affinity, excellence, possession, seize, ancient, necessary, reserved, mortgage, technical, symmetrical, unforgettable, generous, accessible, vicious, general, remember, insurance, repetition, scenery, fluorescent, dependent, accommodation, optimistic, acquisition, library, efficiency, parallel, welfare, physician, fundamental, beginning, requirement, comparative, immediately, passionate, opponent, pilgrimage, extraordinary, February, exceptional, weird, feasible, promise, sociable, financially, generally, theories, resourceful, lightning, foreigner, refrigerated, diligent, maintain, reference, occurred, ideally, completely, hereditary, inferiority, tomatoes, extremely, charitable, kindle, fascinate, boundary, gracious, information, advertisement, genius, perfect, amusing, gorgeous, associate, abundant, nuisance, communicative, affection, misspelled, affectionate, transparent, Australia, fascinating, description, affluence, fermented, influential, governor, obstacle, awareness, defendant, mosquito, previously, acrylic, disappearance, criticism, auxiliary, gauge, unnecessary, energetic, arctic, rhythmical, longitude, equivalent, kernel, psychology, impartial, immense, colleague, professor, valuable, retrieve, miniature, niece, apartheid, impartial, commencement, dynamic, statistics, miniature, simultaneously, niece, immense, colleague, impartial";
+		let frm = document.querySelector('#question');
+		let qNo = document.querySelector('#qNo');
+		let tWords = document.querySelector('#tWords');
+		let kNo = document.querySelector('#kNo');
+		let keyw = document.querySelector('#keyw');
+		let werd = words.split(',');
+		tWords.innerText = werd.length;
+		frm.addEventListener('submit', (e)=>{
+			let QNo = (qNo.value)-1;
+			qNo.value = '';
+			e.preventDefault();
+			console.log(QNo);
+			console.log(werd[QNo]);
+
+			keyw.innerText = werd[QNo]?werd[QNo].toUpperCase():"Question not available"
+			kNo.innerText = QNo+1
+			// if more than array return Question not available
+
+		})
+ 
+	</script>
+</body>
+</html>
